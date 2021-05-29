@@ -1,0 +1,1 @@
+nmap -iL scope.txt -vv -oN scan | grep "Discovered open port" | awk '{print $6":"$4}'| awk -F/ '{print $1}' >> webservers.txt 
